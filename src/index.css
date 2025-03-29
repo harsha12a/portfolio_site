@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    transition: background 0.3s ease, color 0.3s ease;
+}
+.dark {
+    background-color: #111;
+    color: white;
+}
+.mode-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.home {
+    background: url('./assets/bgPortfolio.png') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+}
+
+@keyframes morph-1 {
+    0% { border-radius: 50%; transform: scale(1); background-color: #ff5733; }
+    25% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; transform: rotate(10deg) scale(1.1); background-color: #33ff57; }
+    50% { border-radius: 20%; transform: scale(0.9) rotate(-10deg); background-color: #5733ff; }
+    75% { border-radius: 40% 60% 60% 40% / 50% 30% 70% 50%; transform: scale(1.2); background-color: #f5a623; }
+    100% { border-radius: 50%; transform: scale(1); background-color: #ff33a8; }
+}
+
+@keyframes morph-2 {
+    0% { border-radius: 50%; transform: scale(1); background-color: #33a8ff; }
+    25% { border-radius: 60% 40% 40% 60% / 50% 50% 50% 50%; transform: rotate(-15deg) scale(1.1); background-color: #a833ff; }
+    50% { border-radius: 25% 75% 75% 25% / 50% 25% 75% 50%; transform: scale(0.9) rotate(15deg); background-color: #ff3385; }
+    75% { border-radius: 70% 30% 30% 70% / 40% 60% 60% 40%; transform: scale(1.2); background-color: #33ffcc; }
+    100% { border-radius: 50%; transform: scale(1); background-color: #ff5733; }
+}
+
+.animate-morph-1 {
+    animation: morph-1 3s infinite ease-in-out alternate;
+}
+
+.animate-morph-2 {
+    animation: morph-2 4s infinite ease-in-out alternate;
+}
