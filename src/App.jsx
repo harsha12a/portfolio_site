@@ -59,7 +59,7 @@ function App() {
       </div>
       
       {/* Main content */}
-      <div className="bg-red-500 sm:w-[120px] sm:h-[120px] w-[80px] h-[80px] absolute top-1/2 left-1/2 rounded-full shadow-[0px_0px_50px_15px_rgba(255,10,10,0.4)] z-[3]"></div>
+      {/* <div className="bg-red-500 sm:w-[120px] sm:h-[120px] w-[80px] h-[80px] absolute top-1/2 left-1/2 rounded-full shadow-[0px_0px_50px_15px_rgba(255,10,10,0.4)] z-[3]"></div> */}
       <div className="flex-1 lg:p-6">
         <div ref={anim}>
           <Home />
