@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
-import { Sun, Moon, X } from "lucide-react";
-
+import { Sun, Moon, X, Code } from "lucide-react";
+import { FiHome } from "react-icons/fi";
+import { GrProjects } from "react-icons/gr";
+import { IoMdContact } from "react-icons/io";
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(() => localStorage.getItem("theme") === "dark");
@@ -30,16 +32,20 @@ function Sidebar() {
           } transition-transform duration-300 lg:translate-x-0 pt-10`}
       >
         <ul className="p-6 space-y-10">
-          <li className="relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] hover:translate-x-3 transition-all duration-200 before:dark:bg-white before:bg-black before:duration-300 hover:before:w-full hover:shadow-sm rounded-md p-2">
+          <li className="relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] hover:translate-x-3 transition-all duration-200 before:dark:bg-white before:bg-black before:duration-300 hover:before:w-full hover:shadow-sm rounded-md p-2 flex items-center">
+            <FiHome className="mr-2 text-xl" />
             <a href="#home" className="hover:text-gray-900 hover:dark:text-white text-xl">Home</a>
           </li>
-          <li className="relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] hover:translate-x-3 transition-all duration-200 before:dark:bg-white before:bg-black before:duration-300 hover:before:w-full hover:shadow-sm rounded-md p-2">
+          <li className="relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] hover:translate-x-3 transition-all duration-200 before:dark:bg-white before:bg-black before:duration-300 hover:before:w-full hover:shadow-sm rounded-md p-2 flex items-center">
+            <GrProjects className="mr-2 text-xl" />
             <a href="#projects" className="hover:text-gray-900 hover:dark:text-white text-xl">Projects</a>
           </li>
-          <li className="relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] hover:translate-x-3 transition-all duration-200 before:dark:bg-white before:bg-black before:duration-300 hover:before:w-full hover:shadow-sm rounded-md p-2">
+          <li className="relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] hover:translate-x-3 transition-all duration-200 before:dark:bg-white before:bg-black before:duration-300 hover:before:w-full hover:shadow-sm rounded-md p-2 flex items-center">
+            <Code className="mr-2 text-xl" />
             <a href="#coding" className="hover:text-gray-900 hover:dark:text-white text-xl">Coding Profiles</a>
           </li>
-          <li className="relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] hover:translate-x-3 transition-all duration-200 before:dark:bg-white before:bg-black before:duration-300 hover:before:w-full hover:shadow-sm rounded-md p-2">
+          <li className="relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] hover:translate-x-3 transition-all duration-200 before:dark:bg-white before:bg-black before:duration-300 hover:before:w-full hover:shadow-sm rounded-md p-2 flex items-center">
+            <IoMdContact className="mr-2 text-2xl" />
             <a href="#contact" className="hover:text-gray-900 hover:dark:text-white text-xl">Contact</a>
           </li>
         </ul>

@@ -5,11 +5,13 @@ import CodingProfiles from "./components/CodingProfiles";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Projects from "./components/Projects";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   const anim = useRef(null);
+  const proj = useRef(null);
   const side = useRef(null);
 
   useEffect(() => {
@@ -27,6 +29,24 @@ function App() {
         }
       );
 
+      // Scroll-triggered animation for Projects
+      // gsap.fromTo(
+      //   proj.current,
+      //   { opacity: 0, x: 500 },
+      //   {
+      //     opacity: 1,
+      //     x: 0,
+      //     duration: 1,
+      //     ease: "power2.out",
+      //     scrollTrigger: {
+      //       trigger: proj.current,
+      //       start: "top 100%", // Starts animation earlier
+      //       end: "top 20%",
+      //       scrub: true,
+      //     },
+      //   }
+      // )
+
       // Scroll-triggered animation for CodingProfiles
       gsap.fromTo(
         side.current,
@@ -39,8 +59,8 @@ function App() {
           ease: "power2.out",
           scrollTrigger: {
             trigger: side.current,
-            start: "top 80%", // Starts animation earlier
-            end: "bottom 60%",
+            start: "top 90%", // Starts animation earlier
+            end: "top 20%",
             scrub: true,
           },
         }
@@ -51,7 +71,7 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className="">
     <div className="flex min-h-screen bg-gray-100 dark:bg-gray-900">
       {/* Sidebar with shadow adjustment */}
       <div className="lg:w-[300px] z-[100] lg:block shadow-lg shadow-gray-400 dark:shadow-gray-700">
@@ -60,9 +80,12 @@ function App() {
       
       {/* Main content */}
       {/* <div className="bg-red-500 sm:w-[120px] sm:h-[120px] w-[80px] h-[80px] absolute top-1/2 left-1/2 rounded-full shadow-[0px_0px_50px_15px_rgba(255,10,10,0.4)] z-[3]"></div> */}
-      <div className="flex-1 lg:p-6">
+      <div className="flex-1 lg:p-6 overflow-hidden">
         <div ref={anim}>
           <Home />
+        </div>
+        <div ref={proj}>
+          <Projects />
         </div>
         <div ref={side}>
           <CodingProfiles />
