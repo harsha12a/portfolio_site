@@ -1,6 +1,8 @@
 import workgrid from '../assets/sites/workgrid.png';
 import clothing from '../assets/sites/clothing.png';
 import ecommerce from '../assets/sites/ecomm.png';
+import upskillink from '../assets/sites/upskillink.png';
+import efficio from '../assets/sites/efficio.png';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { useEffect, useRef } from 'react';
@@ -28,7 +30,7 @@ function Projects() {
       gsap.to(
         projs.current,
         {
-          transform: 'translateX(-20%)',
+          transform: 'translateX(-100%)',
           scrollTrigger: {
             trigger: projs.current,
             start: 'top 10%',
@@ -61,6 +63,22 @@ function Projects() {
       img: clothing
     },
     {
+      name: 'Upskillink',
+      description: 'Upskillink is a platform for students to learn and grow.',
+      code: 'https://github.com/harsha12a/upskillink',
+      live: 'https://upskillink.vercel.app/',
+      skills: ['ReactJS', 'TailwindCSS'],
+      img: upskillink
+    },
+    {
+      name: 'Efficio',
+      description: 'Efficio is a advanced project management tool.',
+      code: 'https://github.com/harsha12a/Efficio',
+      live: 'https://efficio-frontend.vercel.app/',
+      skills: ['ReactJS', 'ExpressJS', 'Node.js', 'MongoDB', 'ContextAPI'],
+      img: efficio
+    },
+    {
       name: 'Ecommerce App',
       description: 'Ecommerce App for buying and selling products.',
       code: 'https://github.com/harsha12a/Basic-Ecommerce-Fullstack',
@@ -71,7 +89,7 @@ function Projects() {
   ];
 
   return (
-    <div id="projects" className='mb-48'>
+    <div id="projects" className='mb-20'>
 
       {/* Horizontal Scroll Container */}
       <div className="text-3xl text-center my-16 font-bold">Projects</div>
