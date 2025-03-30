@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Sun, Moon, X, Code } from "lucide-react";
+import { Sun, Moon, X, Code, Terminal } from "lucide-react";
+import { UserRoundSearch } from 'lucide-react';
 import { FiHome } from "react-icons/fi";
 import { GrProjects } from "react-icons/gr";
 import { IoMdContact } from "react-icons/io";
@@ -35,6 +36,14 @@ function Sidebar() {
           <li className="relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] hover:translate-x-3 transition-all duration-200 before:dark:bg-white before:bg-black before:duration-300 hover:before:w-full hover:shadow-sm rounded-md p-2 flex items-center">
             <FiHome className="mr-2 text-xl" />
             <a href="#home" className="hover:text-gray-900 hover:dark:text-white text-xl">Home</a>
+          </li>
+          <li className="relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] hover:translate-x-3 transition-all duration-200 before:dark:bg-white before:bg-black before:duration-300 hover:before:w-full hover:shadow-sm rounded-md p-2 flex items-center">
+            <UserRoundSearch className="mr-2 text-xl" />
+            <a href="#about" className="hover:text-gray-900 hover:dark:text-white text-xl">About</a>
+          </li>
+          <li className="relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] hover:translate-x-3 transition-all duration-200 before:dark:bg-white before:bg-black before:duration-300 hover:before:w-full hover:shadow-sm rounded-md p-2 flex items-center">
+            <Terminal className="mr-2 text-xl" />
+            <a href="#skills" className="hover:text-gray-900 hover:dark:text-white text-xl">Skills</a>
           </li>
           <li className="relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] hover:translate-x-3 transition-all duration-200 before:dark:bg-white before:bg-black before:duration-300 hover:before:w-full hover:shadow-sm rounded-md p-2 flex items-center">
             <GrProjects className="mr-2 text-xl" />
