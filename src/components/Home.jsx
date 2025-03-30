@@ -1,6 +1,6 @@
 function Home() {
   return (
-    <div className="dark:bg-gray-900 bg-gray-100 h-screen text-gray-900 dark:text-white flex flex-col justify-center items-center relative">
+    <div className="dark:bg-gray-900 bg-gray-100 h-screen text-gray-900 dark:text-white flex flex-col justify-center items-center relative" id="home">
       
       <div className="absolute left-[10%] top-[15%] w-[120px] h-[120px] animate-morph-1"></div>
       <div className="absolute right-[20%] bottom-[5%] w-[120px] h-[120px] animate-morph-2"></div>
