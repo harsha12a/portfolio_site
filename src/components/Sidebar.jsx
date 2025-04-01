@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
-import { Sun, Moon, X, Code, Terminal } from "lucide-react";
+import { Sun, Moon, X, Code, Terminal, CircleUser } from "lucide-react";
 import { UserRoundSearch } from 'lucide-react';
 import { FiHome } from "react-icons/fi";
 import { GrProjects } from "react-icons/gr";
-import { IoMdContact } from "react-icons/io";
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(() => localStorage.getItem("theme") === "dark");
@@ -54,7 +53,7 @@ function Sidebar() {
             <a href="#coding" className="hover:text-gray-900 hover:dark:text-white text-xl">Coding Profiles</a>
           </li>
           <li className="relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] hover:translate-x-3 transition-all duration-200 before:dark:bg-white before:bg-black before:duration-300 hover:before:w-full hover:shadow-sm rounded-md p-2 flex items-center">
-            <IoMdContact className="mr-2 text-2xl" />
+            <CircleUser className="mr-2 text-2xl" />
             <a href="#contact" className="hover:text-gray-900 hover:dark:text-white text-xl">Contact</a>
           </li>
         </ul>

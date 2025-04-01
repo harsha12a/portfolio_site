@@ -2,12 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+    --theme-color: black;
+}
+
 body {
     transition: background 0.3s ease, color 0.3s ease;
 }
 .dark {
     background-color: #111;
     color: white;
+    --theme-color: white;
 }
 .mode-toggle {
     background: transparent;
@@ -54,4 +59,28 @@ body {
 @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
+}
+
+svg path {
+    fill: transparent;
+    stroke: var(--theme-color);
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: texts 2s ease-in-out forwards;
+}
+
+@keyframes texts {
+    0% {
+        stroke-dashoffset: 1000;
+    }
+
+    50% {
+        fill: transparent;
+    }
+
+    100% {
+
+        fill: var(--theme-color);
+        stroke-dashoffset: 0;
+    }
 }

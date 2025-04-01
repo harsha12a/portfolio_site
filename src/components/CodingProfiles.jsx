@@ -12,7 +12,7 @@ function CodingProfiles() {
       <ul className='flex items-center justify-center flex-wrap gap-32'>
         <li className='w-fit'>
           <a
-            className='flex justify-between h-20 items-center hover:shadow-black dark:hover:shadow-white shadow-gray-500 shadow-[0px_0px_20px_5px] px-4 py-2'
+            className='flex justify-between h-20 items-center hover:shadow-black dark:hover:shadow-white shadow-transparent shadow-[0px_0px_20px_5px] px-4 py-2 transition-all duration-300'
             href='https://www.codechef.com/users/harsha12a'
             target='_blank'
             rel='noopener noreferrer'
@@ -23,7 +23,7 @@ function CodingProfiles() {
         </li>
         <li className='w-fit'>
           <a
-            className='flex justify-between h-20 items-center hover:shadow-black dark:hover:shadow-white shadow-gray-500 shadow-[0px_0px_20px_5px] px-4 py-2'
+            className='flex justify-between h-20 items-center hover:shadow-black dark:hover:shadow-white shadow-transparent shadow-[0px_0px_20px_5px] px-4 py-2 transition-all duration-300'
             href='https://leetcode.com/u/harsha12a'
             target='_blank'
             rel='noopener noreferrer'
@@ -34,7 +34,7 @@ function CodingProfiles() {
         </li>
         <li className='w-fit'>
           <a
-            className='flex justify-between h-20 items-center hover:shadow-black dark:hover:shadow-white shadow-gray-500 shadow-[0px_0px_20px_5px] px-4 py-2'
+            className='flex justify-between h-20 items-center hover:shadow-black dark:hover:shadow-white shadow-transparent shadow-[0px_0px_20px_5px] px-4 py-2 transition-all duration-300'
             href='https://www.geeksforgeeks.org/user/harshapss'
             target='_blank'
             rel='noopener noreferrer'
@@ -45,7 +45,7 @@ function CodingProfiles() {
         </li>
         <li className='w-fit'>
           <a
-            className='flex justify-between h-20 items-center hover:shadow-black dark:hover:shadow-white shadow-gray-500 shadow-[0px_0px_20px_5px] px-4 py-2'
+            className='flex justify-between h-20 items-center hover:shadow-black dark:hover:shadow-white shadow-transparent shadow-[0px_0px_20px_5px] px-4 py-2 transition-all duration-300'
             href='https://www.hackerrank.com/profile/harsha12a'
             target='_blank'
             rel='noopener noreferrer'
@@ -56,7 +56,7 @@ function CodingProfiles() {
         </li>
         <li className='w-fit'>
           <a
-            className='flex justify-between h-20 items-center hover:shadow-black dark:hover:shadow-white shadow-gray-500 shadow-[0px_0px_20px_5px] px-4 py-2'
+            className='flex justify-between h-20 items-center hover:shadow-black dark:hover:shadow-white shadow-transparent shadow-[0px_0px_20px_5px] px-4 py-2 transition-all duration-300'
             href='https://codeforces.com/profile/harshapss2005'
             target='_blank'
             rel='noopener noreferrer'
@@ -67,7 +67,7 @@ function CodingProfiles() {
         </li>
         <li className='w-fit'>
           <a
-            className='flex justify-between h-20 items-center hover:shadow-black dark:hover:shadow-white shadow-gray-500 shadow-[0px_0px_20px_5px] px-4 py-2'
+            className='flex justify-between h-20 items-center hover:shadow-black dark:hover:shadow-white shadow-transparent shadow-[0px_0px_20px_5px] px-4 py-2 transition-all duration-300'
             href='https://www.hackerearth.com/@harsha12a/'
             target='_blank'
             rel='noopener noreferrer'
