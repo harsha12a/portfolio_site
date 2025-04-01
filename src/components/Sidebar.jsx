@@ -3,6 +3,7 @@ import { Sun, Moon, X, Code, Terminal, CircleUser } from "lucide-react";
 import { UserRoundSearch } from 'lucide-react';
 import { FiHome } from "react-icons/fi";
 import { GrProjects } from "react-icons/gr";
+import { IoIosPaper } from "react-icons/io";
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(() => localStorage.getItem("theme") === "dark");
@@ -43,6 +44,10 @@ function Sidebar() {
           <li className="relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] hover:translate-x-3 transition-all duration-200 before:dark:bg-white before:bg-black before:duration-300 hover:before:w-full hover:shadow-sm rounded-md p-2 flex items-center">
             <Terminal className="mr-2 text-xl" />
             <a href="#skills" className="hover:text-gray-900 hover:dark:text-white text-xl">Skills</a>
+          </li>
+          <li className="relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] hover:translate-x-3 transition-all duration-200 before:dark:bg-white before:bg-black before:duration-300 hover:before:w-full hover:shadow-sm rounded-md p-2 flex items-center">
+            <IoIosPaper className="mr-2 text-xl" />
+            <a href="https://drive.google.com/file/d/101MFU37WYrJww9eJ9T6Iezp7q774-Lr9/view?usp=sharing" target='_blank' className="hover:text-gray-900 hover:dark:text-white text-xl">Resume</a>
           </li>
           <li className="relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] hover:translate-x-3 transition-all duration-200 before:dark:bg-white before:bg-black before:duration-300 hover:before:w-full hover:shadow-sm rounded-md p-2 flex items-center">
             <GrProjects className="mr-2 text-xl" />

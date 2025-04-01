@@ -61,7 +61,7 @@ body {
     50% { opacity: 0; }
 }
 
-svg path {
+.head path {
     fill: transparent;
     stroke: var(--theme-color);
     stroke-dasharray: 1000;
