@@ -46,11 +46,11 @@ body {
 }
 
 .animate-morph-1 {
-    animation: morph-1 3s infinite ease-in-out alternate;
+    animation: morph-1 7s infinite ease-in-out alternate;
 }
 
 .animate-morph-2 {
-    animation: morph-2 4s infinite ease-in-out alternate;
+    animation: morph-2 5s infinite ease-in-out alternate;
 }
 
 .blink {
@@ -66,7 +66,7 @@ body {
     stroke: var(--theme-color);
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    animation: texts 2s ease-in-out forwards;
+    animation: texts 4s ease-in-out forwards;
 }
 
 @keyframes texts {

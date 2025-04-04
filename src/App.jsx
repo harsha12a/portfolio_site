@@ -113,9 +113,9 @@ function App() {
 
   return (
     <div className="">
-    <div className="flex min-h-screen bg-gray-100 dark:bg-gray-900">
+    <div className="flex min-h-screen bg-white dark:bg-black">
       {/* Sidebar with shadow adjustment */}
-      <div className="lg:w-[300px] z-[100] lg:block shadow-lg shadow-gray-400 dark:shadow-gray-700">
+      <div className="z-[100] shadow-lg shadow-gray-400 dark:shadow-gray-700">
         <Sidebar />
       </div>
       

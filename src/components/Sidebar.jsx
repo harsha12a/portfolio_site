@@ -1,76 +1,112 @@
 import { useState, useEffect } from "react";
-import { Sun, Moon, X, Code, Terminal, CircleUser } from "lucide-react";
-import { UserRoundSearch } from 'lucide-react';
-import { FiHome } from "react-icons/fi";
-import { GrProjects } from "react-icons/gr";
-import { IoIosPaper } from "react-icons/io";
+import { Sun, Moon, X, Code, Terminal, CircleUser, UserRoundSearch, House, FileUser, FolderKanban } from "lucide-react";
+
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(() => localStorage.getItem("theme") === "dark");
 
   useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
+    document.documentElement.classList.toggle("dark", darkMode);
+    localStorage.setItem("theme", darkMode ? "dark" : "light");
   }, [darkMode]);
+
+  const links = [
+    { href: "#home", label: "Home", icon: <House /> },
+    { href: "#about", label: "About", icon: <UserRoundSearch /> },
+    { href: "#skills", label: "Skills", icon: <Terminal /> },
+    {
+      href: "https://drive.google.com/file/d/101MFU37WYrJww9eJ9T6Iezp7q774-Lr9/view?usp=sharing",
+      label: "Resume", icon: <FileUser />, external: true
+    },
+    { href: "#projects", label: "Projects", icon: <FolderKanban /> },
+    { href: "#coding", label: "Coding Profiles", icon: <Code /> },
+    { href: "#contact", label: "Contact", icon: <CircleUser /> }
+  ];
+
 
   return (
     <>
-      {isOpen && <div className="fixed inset-0 bg-opacity-50 lg:hidden" onClick={() => setIsOpen(false)} />}
-      <button
-        className="fixed top-4 right-4 z-[100] p-2 text-gray-800 bg-white rounded-md lg:hidden"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        {isOpen ? <X size={20} /> : <div className="w-5 h-5 flex justify-center items-center">☰</div>}
-      </button>
+      {/* Mobile Sidebar */}
+      <div className="md:hidden">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="fixed top-4 right-4 z-50 p-2 bg-white dark:bg-black rounded-md shadow"
+        >
+          {isOpen ? <X size={22} /> : <span className="text-2xl font-bold">☰</span>}
+        </button>
 
-      <aside
-        className={`fixed left-0 top-0 h-full w-[300px] bg-white/50 dark:bg-gray-900/50 text-black dark:text-white shadow-lg backdrop-blur-md transform ${isOpen ? "translate-x-0" : "-translate-x-full"
-          } transition-transform duration-300 lg:translate-x-0 pt-10`}
-      >
-        <ul className="p-6 space-y-10">
-          <li className="relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] hover:translate-x-3 transition-all duration-200 before:dark:bg-white before:bg-black before:duration-300 hover:before:w-full hover:shadow-sm rounded-md p-2 flex items-center">
-            <FiHome className="mr-2 text-xl" />
-            <a href="#home" className="hover:text-gray-900 hover:dark:text-white text-xl">Home</a>
-          </li>
-          <li className="relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] hover:translate-x-3 transition-all duration-200 before:dark:bg-white before:bg-black before:duration-300 hover:before:w-full hover:shadow-sm rounded-md p-2 flex items-center">
-            <UserRoundSearch className="mr-2 text-xl" />
-            <a href="#about" className="hover:text-gray-900 hover:dark:text-white text-xl">About</a>
-          </li>
-          <li className="relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] hover:translate-x-3 transition-all duration-200 before:dark:bg-white before:bg-black before:duration-300 hover:before:w-full hover:shadow-sm rounded-md p-2 flex items-center">
-            <Terminal className="mr-2 text-xl" />
-            <a href="#skills" className="hover:text-gray-900 hover:dark:text-white text-xl">Skills</a>
-          </li>
-          <li className="relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] hover:translate-x-3 transition-all duration-200 before:dark:bg-white before:bg-black before:duration-300 hover:before:w-full hover:shadow-sm rounded-md p-2 flex items-center">
-            <IoIosPaper className="mr-2 text-xl" />
-            <a href="https://drive.google.com/file/d/101MFU37WYrJww9eJ9T6Iezp7q774-Lr9/view?usp=sharing" target='_blank' className="hover:text-gray-900 hover:dark:text-white text-xl">Resume</a>
-          </li>
-          <li className="relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] hover:translate-x-3 transition-all duration-200 before:dark:bg-white before:bg-black before:duration-300 hover:before:w-full hover:shadow-sm rounded-md p-2 flex items-center">
-            <GrProjects className="mr-2 text-xl" />
-            <a href="#projects" className="hover:text-gray-900 hover:dark:text-white text-xl">Projects</a>
-          </li>
-          <li className="relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] hover:translate-x-3 transition-all duration-200 before:dark:bg-white before:bg-black before:duration-300 hover:before:w-full hover:shadow-sm rounded-md p-2 flex items-center">
-            <Code className="mr-2 text-xl" />
-            <a href="#coding" className="hover:text-gray-900 hover:dark:text-white text-xl">Coding Profiles</a>
-          </li>
-          <li className="relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] hover:translate-x-3 transition-all duration-200 before:dark:bg-white before:bg-black before:duration-300 hover:before:w-full hover:shadow-sm rounded-md p-2 flex items-center">
-            <CircleUser className="mr-2 text-2xl" />
-            <a href="#contact" className="hover:text-gray-900 hover:dark:text-white text-xl">Contact</a>
-          </li>
+        <aside
+          className={`fixed top-0 left-0 h-full w-[270px] bg-white dark:bg-zinc-900 text-black dark:text-white transform transition-transform duration-300 z-40 shadow-xl ${isOpen ? "translate-x-0" : "-translate-x-full"
+            }`}
+        >
+          <ul className="mt-16 p-5 space-y-6">{
+            links.map(({ href, label, icon, external }) => (
+              <li key={label} className="flex items-center gap-3 p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700">
+                {icon}
+                <a
+                  href={href}
+                  className="text-base"
+                  target={external ? "_blank" : "_self"}
+                  rel={external ? "noopener noreferrer" : ""}
+                >
+                  {label}
+                </a>
+              </li>))}</ul>
+
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className="fixed top-6 right-6 flex items-center rounded-full w-14 h-7 bg-gray-300 dark:bg-zinc-700 p-1 transition-colors duration-300"
+            title={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+          >
+            <div
+              className={`w-5 h-5 rounded-full bg-white dark:bg-yellow-400 shadow-md transform transition-transform duration-300 ${darkMode ? "translate-x-7" : "translate-x-0"
+                } flex items-center justify-center`}
+            >
+              {darkMode ? <Sun size={12} className="text-yellow-900" /> : <Moon size={12} className="text-gray-700" />}
+            </div>
+          </button>
+        </aside>
+
+        {/* Backdrop */}
+        {isOpen && <div className="fixed inset-0 bg-black/30 z-30" onClick={() => setIsOpen(false)} />}
+      </div>
+
+      {/* Desktop Navbar */}
+      <nav className="hidden md:flex fixed top-0 w-full h-16 bg-white dark:bg-black shadow-xl shadow-gray-300 dark:shadow-gray-800 items-center px-8 z-50">
+        <ul className="flex gap-20 items-center justify-center w-full">
+          {links.map(({ href, label, external, icon }) => (
+            <li key={label} className="relative group flex items-center justify-center">
+              <a
+                href={href}
+                target={external ? "_blank" : "_self"}
+                rel={external ? "noopener noreferrer" : ""}
+                className="text-sm font-medium hover:text-green-500 transition-all duration-300 flex items-center justify-center"
+              >
+                {icon}
+              </a>
+              {/* Tooltip on hover */}
+              <span className="absolute top-10 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+                {label}
+              </span>
+            </li>
+          ))}
         </ul>
 
         <button
-          className="absolute bottom-6 left-6 flex items-center gap-2 p-2 rounded-md dark:bg-gray-300/50 bg-gray-700/50"
           onClick={() => setDarkMode(!darkMode)}
+          className="ml-auto flex items-center rounded-full w-14 h-7 bg-gray-300 dark:bg-zinc-700 p-1 transition-colors duration-300"
+          title={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
         >
-          {darkMode ? <Sun size={20} /> : <Moon size={20} />}
-          {darkMode ? "Light Mode" : "Dark Mode"}
+          <div
+            className={`w-5 h-5 rounded-full bg-white dark:bg-yellow-400 shadow-md transform transition-transform duration-300 ${darkMode ? "translate-x-7" : "translate-x-0"
+              } flex items-center justify-center`}
+          >
+            {darkMode ? <Sun size={12} className="text-yellow-900" /> : <Moon size={12} className="text-gray-700" />}
+          </div>
         </button>
-      </aside>
+
+      </nav>
+
     </>
   );
 }
