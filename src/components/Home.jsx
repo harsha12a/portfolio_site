@@ -1,18 +1,6 @@
-import { useState, useEffect } from "react";
+import { Typewriter } from "react-simple-typewriter";
 function Home() {
   const roles = ["Full Stack Developer", "AI Enthusiast", "Competitive Programmer"];
-  const [curr, setCurr] = useState(roles[0]);
-  useEffect(() => {
-    let i = 0;
-    const interval = setInterval(() => {
-      setCurr(() => {
-        const newRole = roles[i];
-        i = (i + 1) % roles.length;
-        return newRole;
-      });
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <div className="dark:bg-black bg-white h-screen text-black dark:text-white flex flex-col justify-center items-center relative" id="home">
@@ -32,9 +20,16 @@ function Home() {
 
         <div className="flex justify-center items-center mt-4">
           <p className="text-lg sm:text-2xl text-black dark:text-white mt-2">
-            {curr} . . .
+            <Typewriter 
+              words={roles}
+              loop={0}
+              cursor
+              cursorStyle='|'
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={2000}
+            />
           </p>
-          <div className="text-lg ml-2 dark:bg-gray-300 bg-gray-800 w-[1px] h-6 blink"></div>
         </div>
       </div>
     </div>
