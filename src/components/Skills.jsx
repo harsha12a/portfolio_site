@@ -1,57 +1,51 @@
 import React from "react";
-import { Code, Server, Database, Brush, Terminal } from "lucide-react"; // Importing icons
+import { Code, Server, Database, Brush, Terminal } from "lucide-react";
 
 function Skills() {
   return (
-    <div id="skills" className="flex flex-col justify-center items-center dark:text-white text-gray-900">
-      <section className="m-5 text-center lg:p-10 p-5 dark:bg-gray-800 bg-gray-200 rounded-2xl shadow-lg w-full max-w-3xl">
-        <h1 className="text-5xl font-extrabold mb-6 dark:text-green-400 text-green-600">My Skills 🚀</h1>
+    <section id="skills" className="w-full bg-gradient-to-bl from-white via-gray-100 to-gray-300 dark:from-black dark:to-gray-900 py-20 px-4 text-gray-900 dark:text-white">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-3xl sm:text-5xl font-bold text-green-500 dark:text-green-400 mb-10">
+          Skills & Tools
+        </h2>
 
-        <p className="sm:text-lg text-md leading-relaxed mb-6">
-          Here’s a quick look at my **tech stack** & what I love working with!  
+        <p className="text-gray-600 dark:text-gray-400 max-w-xl mx-auto text-sm sm:text-base mb-12">
+          Technologies I work with and enjoy exploring:
         </p>
 
-        <hr className="my-8 border-gray-700" />
-
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 text-center">
-          {/* Frontend */}
-          <div className="p-4 dark:bg-gray-700 bg-gray-300 rounded-lg shadow-md">
-            <Code className="w-10 h-10 mx-auto text-blue-500" />
-            <h3 className="mt-3 font-bold">Frontend</h3>
-            <p className="text-sm">React, JavaScript, Redux</p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-y-10 text-center">
+          <div>
+            <Code className="w-8 h-8 mx-auto text-blue-500" />
+            <p className="mt-2 text-sm font-medium">Frontend</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">React, JS</p>
           </div>
 
-          {/* Backend */}
-          <div className="p-4 dark:bg-gray-700 bg-gray-300 rounded-lg shadow-md">
-            <Server className="w-10 h-10 mx-auto text-red-500" />
-            <h3 className="mt-3 font-bold">Backend</h3>
-            <p className="text-sm">Node.js, Express.js</p>
+          <div>
+            <Server className="w-8 h-8 mx-auto text-red-500" />
+            <p className="mt-2 text-sm font-medium">Backend</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">Node, Express</p>
           </div>
 
-          {/* Database */}
-          <div className="p-4 dark:bg-gray-700 bg-gray-300 rounded-lg shadow-md">
-            <Database className="w-10 h-10 mx-auto text-yellow-500" />
-            <h3 className="mt-3 font-bold">Databases</h3>
-            <p className="text-sm">MongoDB, MySQL</p>
-          </div>
-          
-          {/* AI/ML */}
-          <div className="p-4 dark:bg-gray-700 bg-gray-300 rounded-lg shadow-md">
-            <Terminal className="w-10 h-10 mx-auto text-purple-500" />
-            <h3 className="mt-3 font-bold">Languages</h3>
-            <p className="text-sm">C, C++, Java, Python, Rust, PHP</p>
+          <div>
+            <Database className="w-8 h-8 mx-auto text-yellow-500" />
+            <p className="mt-2 text-sm font-medium">Databases</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">MongoDB, MySQL</p>
           </div>
 
-          {/* UI/UX */}
-          <div className="p-4 dark:bg-gray-700 bg-gray-300 rounded-lg shadow-md">
-            <Brush className="w-10 h-10 mx-auto text-green-500" />
-            <h3 className="mt-3 font-bold">UI/UX</h3>
-            <p className="text-sm">Figma, Tailwind, CSS, Bootstrap</p>
+          <div>
+            <Terminal className="w-8 h-8 mx-auto text-purple-500" />
+            <p className="mt-2 text-sm font-medium">Languages</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">C, Java, Python</p>
           </div>
 
+          <div>
+            <Brush className="w-8 h-8 mx-auto text-green-500" />
+            <p className="mt-2 text-sm font-medium">Design</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">Figma, Tailwind</p>
+          </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }
 

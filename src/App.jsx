@@ -15,7 +15,7 @@ gsap.registerPlugin(ScrollTrigger);
 function App() {
   const anim = useRef(null);
   const proj = useRef(null);
-  const side = useRef(null);
+  const code = useRef(null);
   const abt = useRef(null);
   const skl = useRef(null);
   const contact = useRef(null);
@@ -47,7 +47,7 @@ function App() {
           scrollTrigger: {
             trigger: abt.current,
             start: "top 90%", // Starts animation earlier
-            end: "top 60%",
+            end: "top 40%",
             scrub: true,
           }
         }
@@ -65,7 +65,7 @@ function App() {
           scrollTrigger: {
             trigger: skl.current,
             start: "top 90%", // Starts animation earlier
-            end: "top 60%",
+            end: "top 40%",
             scrub: true,
           }
         }
@@ -73,16 +73,15 @@ function App() {
 
       // Scroll-triggered animation for CodingProfiles
       gsap.fromTo(
-        side.current,
-        { opacity: 0, y: 200, scale: 0.8 },
+        code.current,
+        { opacity: 0, y: 200 },
         {
           opacity: 1,
-          scale: 1,
           y: 0,
           duration: 1,
           ease: "power2.out",
           scrollTrigger: {
-            trigger: side.current,
+            trigger: code.current,
             start: "top 90%", // Starts animation earlier
             end: "top 20%",
             scrub: true,
@@ -94,7 +93,7 @@ function App() {
         contact.current,
         { opacity: 0, scale: 0.8 },
         {
-          opacity: 1,
+          opacity: 2,
           scale: 1,
           duration: 2,
           ease: "power2.out",
@@ -133,7 +132,7 @@ function App() {
         <div ref={proj}>
           <Projects />
         </div>
-        <div ref={side}>
+        <div ref={code}>
           <CodingProfiles />
         </div>
         <div ref={contact}>

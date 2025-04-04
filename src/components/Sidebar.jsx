@@ -14,13 +14,13 @@ function Sidebar() {
     { href: "#home", label: "Home", icon: <House /> },
     { href: "#about", label: "About", icon: <UserRoundSearch /> },
     { href: "#skills", label: "Skills", icon: <Terminal /> },
+    { href: "#projects", label: "Projects", icon: <FolderKanban /> },
+    { href: "#coding", label: "Coding Profiles", icon: <Code /> },
+    { href: "#contact", label: "Contact", icon: <CircleUser /> },
     {
       href: "https://drive.google.com/file/d/101MFU37WYrJww9eJ9T6Iezp7q774-Lr9/view?usp=sharing",
       label: "Resume", icon: <FileUser />, external: true
-    },
-    { href: "#projects", label: "Projects", icon: <FolderKanban /> },
-    { href: "#coding", label: "Coding Profiles", icon: <Code /> },
-    { href: "#contact", label: "Contact", icon: <CircleUser /> }
+    }
   ];
 
 
@@ -55,7 +55,7 @@ function Sidebar() {
 
           <button
             onClick={() => setDarkMode(!darkMode)}
-            className="fixed top-6 right-6 flex items-center rounded-full w-14 h-7 bg-gray-300 dark:bg-zinc-700 p-1 transition-colors duration-300"
+            className="fixed top-6 left-6 flex items-center rounded-full w-14 h-7 bg-gray-300 dark:bg-zinc-700 p-1 transition-colors duration-300"
             title={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
           >
             <div
