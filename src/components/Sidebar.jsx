@@ -72,7 +72,7 @@ function Sidebar() {
       </div>
 
       {/* Desktop Navbar */}
-      <nav className="hidden md:flex fixed top-0 w-full h-16 bg-white dark:bg-black shadow-xl shadow-gray-300 dark:shadow-gray-800 items-center px-8 z-50">
+      <nav className="hidden md:flex fixed top-0 w-full h-16 bg-white/90 dark:bg-black/90 backdrop-blur-sm items-center px-8 z-50">
         <ul className="flex gap-20 items-center justify-center w-full">
           {links.map(({ href, label, external, icon }) => (
             <li key={label} className="relative group flex items-center justify-center">
