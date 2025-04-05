@@ -16,11 +16,7 @@ function Sidebar() {
     { href: "#skills", label: "Skills", icon: <Terminal /> },
     { href: "#projects", label: "Projects", icon: <FolderKanban /> },
     { href: "#coding", label: "Coding Profiles", icon: <Code /> },
-    { href: "#contact", label: "Contact", icon: <CircleUser /> },
-    {
-      href: "https://drive.google.com/file/d/101MFU37WYrJww9eJ9T6Iezp7q774-Lr9/view?usp=sharing",
-      label: "Resume", icon: <FileUser />, external: true
-    }
+    { href: "#contact", label: "Contact", icon: <CircleUser /> }
   ];
 
 

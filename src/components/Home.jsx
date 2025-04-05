@@ -3,13 +3,13 @@ function Home() {
   const roles = ["Full Stack Developer", "AI Enthusiast", "Competitive Programmer"];
 
   return (
-    <div className="dark:bg-black bg-white h-screen text-black dark:text-white flex flex-col justify-center items-center relative" id="home">
+    <div className="h-screen flex flex-col justify-center items-center relative" id="home">
 
       <div className="absolute left-[10%] top-[15%] w-[120px] h-[120px] animate-morph-1"></div>
       <div className="absolute right-[20%] bottom-[5%] w-[120px] h-[120px] animate-morph-2"></div>
 
       <div className="bg-red-500 sm:w-[120px] blur-[20px] sm:h-[120px] w-[80px] h-[80px] absolute ml-40 mb-20 rounded-full shadow-[0px_0px_50px_50px_rgba(255,10,10,0.4)]"></div>
-
+      <div className="bg-blue-700 sm:w-[120px] blur-[20px] sm:h-[120px] w-[80px] h-[80px] absolute left-0 bottom-20 -translate-x-1/2 z-[-1] rounded-full shadow-[10px_10px_150px_300px_rgba(0,0,255,0.4)]"></div>
       <div className="text-center z-[20]">
         {/* <h1 className="text-4xl sm:text-6xl font-bold">Hello, I'm Sree Satya Harsha</h1> */}
         <svg width="" height="" className="head px-5" viewBox="0 0 641 43" fill="none" xmlns="http://www.w3.org/2000/svg">

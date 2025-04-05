@@ -22,18 +22,30 @@ function About() {
         </p>
 
         <div className="mt-10 flex flex-wrap justify-center gap-4 text-sm sm:text-base font-medium">
-          <span className="px-4 py-2 dark:bg-gray-800 bg-gray-300 hover:bg-green-500 hover:text-black transition-all duration-300 rounded-full">
+          <span className="px-4 py-2 dark:bg-gray-800 bg-gray-300 dark:hover:bg-green-500 hover:bg-green-500 hover:text-black transition-all duration-300 rounded-full">
             ♟️ Chess Enthusiast
           </span>
-          <span className="px-4 py-2 dark:bg-gray-800 bg-gray-300 hover:bg-pink-400 hover:text-black transition-all duration-300 rounded-full">
+          <span className="px-4 py-2 dark:bg-gray-800 bg-gray-300 dark:hover:bg-pink-400 hover:bg-pink-400 hover:text-black transition-all duration-300 rounded-full">
             🏸 Badminton Player
           </span>
-          <span className="px-4 py-2 dark:bg-gray-800 bg-gray-300 hover:bg-yellow-400 hover:text-black transition-all duration-300 rounded-full">
+          <span className="px-4 py-2 dark:bg-gray-800 bg-gray-300 dark:hover:bg-yellow-400 hover:bg-yellow-400 hover:text-black transition-all duration-300 rounded-full">
             📚 Book Reader
           </span>
         </div>
+        <div className='mt-10'>
+          <div className="mt-10">
+            <a
+              href="https://drive.google.com/file/d/101MFU37WYrJww9eJ9T6Iezp7q774-Lr9/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xl bg-blue-300 text-black px-6 py-3 rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300 inline-block"
+            >
+              View My Resume
+            </a>
+          </div>
 
-        <p className="mt-10 text-base sm:text-lg text-green-400 font-medium tracking-wide">
+        </div>
+        <p className="mt-5 text-base sm:text-lg text-green-400 font-medium tracking-wide">
           Always exploring new ideas through code.
         </p>
       </div>
