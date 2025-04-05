@@ -85,7 +85,7 @@ function Sidebar() {
                 {icon}
               </a>
               {/* Tooltip on hover */}
-              <span className="absolute top-10 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+              <span className="absolute top-10 dark:text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
                 {label}
               </span>
             </li>

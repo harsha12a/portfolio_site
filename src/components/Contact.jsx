@@ -7,7 +7,7 @@ function Contact() {
       id="contact"
       className="flex flex-col items-center justify-center py-12 px-4 text-gray-900 dark:text-white"
     >
-      <div className="w-full max-w-xl bg-white/10 dark:bg-gray-800/30 backdrop-blur-md border border-white/10 dark:border-gray-700 rounded-2xl p-6 sm:p-8 shadow-lg">
+      <div className="w-full max-w-xl bg-white/10 dark:black/30 backdrop-blur-md border border-white/10 dark:border-black/10 rounded-2xl p-6 sm:p-8 shadow-[0px_0px_20px_20px_rgba(0,0,0,0.1)]">
         <h2 className="text-3xl font-bold text-center mb-4 text-blue-600 dark:text-blue-400">
           Get in Touch! 📩
         </h2>
