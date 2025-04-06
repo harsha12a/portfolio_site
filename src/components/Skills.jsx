@@ -35,7 +35,7 @@ function Skills() {
           <div>
             <Terminal className="w-8 h-8 mx-auto text-purple-500" />
             <p className="mt-2 text-sm font-medium">Languages</p>
-            <p className="text-xs text-gray-500 dark:text-gray-400">C, Java, Python</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">C, C++, Java, Python</p>
           </div>
 
           <div>

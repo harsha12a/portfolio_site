@@ -84,3 +84,21 @@ body {
         stroke-dashoffset: 0;
     }
 }
+
+.random {
+    animation: moves 30s infinite linear;
+}
+@keyframes moves {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        transform: translate(600px, -300px);
+    }
+    50% {
+        transform: translate(1200px, 0px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
