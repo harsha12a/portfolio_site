@@ -40,6 +40,7 @@ function Contact() {
             <Linkedin className="w-6 h-6 sm:w-7 sm:h-7" />
           </a>
         </div>
+        <div className="text-center mt-5 text-sm">&copy; {new Date().getFullYear()} Sree Satya Harsha Peddibhotla</div>
       </div>
     </div>
   );

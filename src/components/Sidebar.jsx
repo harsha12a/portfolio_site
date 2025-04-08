@@ -26,7 +26,7 @@ function Sidebar() {
       <div className="md:hidden">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="fixed top-4 right-4 z-50 p-2 bg-white dark:bg-black rounded-md shadow"
+          className="fixed top-4 right-4 z-50 p-2 rounded-md shadow"
         >
           {isOpen ? <X size={22} /> : <span className="text-2xl font-bold">☰</span>}
         </button>

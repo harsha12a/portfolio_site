@@ -102,3 +102,7 @@ body {
         transform: translate(0px, 0px);
     }
 }
+
+.pers {
+    perspective: 2000px;
+}

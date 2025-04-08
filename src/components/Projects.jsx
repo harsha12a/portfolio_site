@@ -78,6 +78,21 @@ function Projects() {
       img: ecommerce
     },
   ];
+  const mousemove = (e) => {
+    let ele = e.currentTarget;
+    let rect = ele.getBoundingClientRect();
+    let x = e.clientX - rect.left;
+    let y = e.clientY - rect.top;
+    let X = (x / rect.width  - 0.5) * 20;
+    let Y = (y / rect.height - 0.5) * -20;
+    ele.style.transform = `rotateY(${X}deg) rotateX(${Y}deg)`;
+    ele.style.transition = 'transform 0.1s ease-out';
+  }
+  const mouseleave = (e) => {
+    let ele = e.currentTarget;
+    ele.style.transform = `rotateY(0deg) rotateX(0deg)`;
+    ele.style.transition = 'transform 0.1s ease-out';
+  }
 
   return (
     <section id="projects" className="mb-20">
@@ -87,12 +102,14 @@ function Projects() {
       <div ref={containerRef} className="relative overflow-hidden">
         <div
           ref={scrollRef}
-          className="flex gap-6 px-10 py-5 w-fit"
+          className="flex gap-6 px-10 py-5 w-fit pers"
         >
           {projects.map((project, index) => (
             <div
             key={index}
-            className="bg-white dark:bg-gray-800 relative rounded-lg shadow-md min-w-[400px] max-w-[500px] flex flex-col"
+            onMouseMove={mousemove}
+            onMouseLeave={mouseleave}
+            className="bg-gray-300 dark:bg-gray-800 relative rounded-lg shadow-md min-w-[400px] max-w-[500px] flex flex-col"
           >
             <img
               src={project.img}
@@ -125,7 +142,7 @@ function Projects() {
                 href={project.code}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-900 dark:text-blue-500 dark:bg-black bg-white p-1 px-3 rounded-md text-sm dark:hover:bg-blue-900 hover:bg-blue-200"
+                className="text-blue-900 dark:text-blue-500 dark:bg-black bg-white p-1 px-3 rounded-md text-md dark:hover:bg-blue-900 hover:bg-blue-200"
               >
                 Code
               </a>
@@ -133,7 +150,7 @@ function Projects() {
                 href={project.live}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-900 dark:text-blue-500 dark:bg-black bg-white p-1 px-3 rounded-md text-sm dark:hover:bg-blue-900 hover:bg-blue-200"
+                className="text-blue-900 dark:text-blue-500 dark:bg-black bg-white p-1 px-3 rounded-md text-md dark:hover:bg-blue-900 hover:bg-blue-200"
               >
                 Live site
               </a>
