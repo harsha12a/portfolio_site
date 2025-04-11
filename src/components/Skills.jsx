@@ -2,8 +2,8 @@ import React from "react";
 import { Code, Server, Database, PencilRuler, Terminal } from "lucide-react";
 
 const skills = [
-  { icon: Code, title: "Frontend", tools: "React, Tailwind CSS, Bootstrap CSS, GSAP", color: "text-blue-500" },
-  { icon: Server, title: "Backend", tools: "NodeJS, ExpressJS, Mongoose", color: "text-red-500" },
+  { icon: Code, title: "Frontend", tools: "React, Tailwind CSS, Bootstrap CSS, GSAP, Redux", color: "text-blue-500" },
+  { icon: Server, title: "Backend", tools: "NodeJS, ExpressJS, Mongoose, Prisma", color: "text-red-500" },
   { icon: Database, title: "Databases", tools: "MongoDB, MySQL", color: "text-yellow-500" },
   { icon: Terminal, title: "Languages", tools: "C, C++, Java, Python", color: "text-purple-500" },
   { icon: PencilRuler, title: "Tools", tools: "Figma, Canva, Linux, Git/Github, VSCode", color: "text-pink-500" },
