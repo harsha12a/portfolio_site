@@ -3,6 +3,7 @@ import clothing from '../assets/sites/clothing.png';
 import ecommerce from '../assets/sites/ecomm.png';
 import upskillink from '../assets/sites/upskillink.png';
 import efficio from '../assets/sites/efficio.png';
+import justus from '../assets/sites/justus.png';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect, useRef } from 'react';
@@ -37,6 +38,14 @@ function Projects() {
   }, []);
 
   const projects = [
+    {
+      name: 'Just Us',
+      description: 'Just Us is a social media platform for people to connect and share their thoughts through private chats.',
+      code: 'https://github.com/harsha12a/JustUs',
+      live: 'https://just-us-client.vercel.app/',
+      skills: ['ReactJS', 'ExpressJS', 'Node.js', 'MongoDB', 'TailwindCSS', 'Redux', 'Prisma'],
+      img: justus
+    },
     {
       name: 'WorkGrid',
       description: 'Create Groups, Assign tasks, Attach files, Track Progress',
