@@ -24,16 +24,16 @@ function Skills() {
           Technologies I work with and enjoy exploring:
         </p>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-y-10 text-center">
+        <div className="flex justify-center flex-wrap gap-10 text-center">
           {skills.map(({ icon: Icon, title, tools, color }, index) => (
-            <div key={index}>
+            <div key={index} className="flex flex-col items-center justify-start p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out w-48 h-52">
               <Icon className={`w-8 h-8 mx-auto ${color}`} aria-hidden="true" />
-              <p className="mt-2 text-md font-medium">{title}</p>
+              <p className="mt-2 text-lg font-medium">{title}</p>
               {/* <p className="text-xs text-gray-600 dark:text-gray-400">{tools}</p> */}
-              <ul className="list-disc list-inside mt-2 text-sm text-gray-600 dark:text-gray-400">
+              <ul className="list-disc list-inside mt-2 font-semibold text-sm text-gray-600 dark:text-gray-400">
               {
                 tools.split(",").map((tool, i) => (
-                  <li key={i} className="">
+                  <li key={i} className="text-start">
                     {tool.trim()}
                   </li>
                 ))
