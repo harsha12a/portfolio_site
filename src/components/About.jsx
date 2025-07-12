@@ -52,7 +52,7 @@ function About() {
 
           <div className="mt-8">
             <a
-              href="https://drive.google.com/file/d/101MFU37WYrJww9eJ9T6Iezp7q774-Lr9/view?usp=sharing"
+              href="https://drive.google.com/file/d/1q74mj9sexpaBR4ldgPa1O2ztCa2UySyx/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block text-lg bg-blue-400 text-black px-6 py-3 rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300 shadow-md"
